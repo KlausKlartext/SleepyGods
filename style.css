@@ -1,4 +1,6 @@
 body {
+padding-top: env(safe-area-inset-top);
+    
     margin: 0;
 
     color: #3d3527;
