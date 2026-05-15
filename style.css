@@ -1,7 +1,7 @@
 body {
-padding-top: env(safe-area-inset-top);
-    
     margin: 0;
+
+    padding-top: 0;
 
     color: #3d3527;
 
@@ -11,24 +11,28 @@ padding-top: env(safe-area-inset-top);
 
     background-image:
         linear-gradient(
-            rgba(0,0,0,0.18),
+            rgba(0,0,0,0.10),
             rgba(0,0,0,0.35)
         ),
         url("images/background-ocean.jpg");
 
-    background-size:
-        cover;
+    background-size: cover;
 
-    background-position:
-        center top;
+    background-position: center top;
 
-    background-repeat:
-        no-repeat;
+    background-repeat: no-repeat;
 
-    background-attachment:
-        fixed;
+    background-attachment: fixed;
 
     min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background: #021821;
 }
 
 body.popup-open .container,
@@ -43,54 +47,34 @@ header {
 
     position: relative;
 
-    height: 38vh;
+    height: 42vh;
 
-    min-height: 320px;
+    min-height: 260px;
 
     overflow: hidden;
 
-}
-
-header h1 {
-
     margin: 0;
 
-    font-size: 48px;
-
-    letter-spacing: 1px;
-
-    text-shadow:
-        0 4px 18px rgba(0,0,0,0.55);
-}
-
-header p {
-
-    margin-top: 12px;
-
-    font-size: 18px;
-
-    opacity: 0.95;
-
-    text-shadow:
-        0 3px 12px rgba(0,0,0,0.55);
+    padding: 0;
 }
 
 .container {
 
-    padding: 14px;
+    padding-left: 14px;
 
-    margin-top: -80px;
+    padding-right: 14px;
+
+    margin-top: -90px;
 
     position: relative;
 
     z-index: 5;
-
 }
 
 .lookup-card {
 
     background:
-        rgba(244,239,230,0.90);
+        rgba(244,239,230,0.92);
 
     backdrop-filter:
         blur(8px);
