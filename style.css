@@ -14,8 +14,8 @@ body {
         no-repeat;
 
     background-size:
-        cover,
-        contain;
+    100% auto,
+    contain
 
     background-position:
         center top,
