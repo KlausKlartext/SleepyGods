@@ -41,17 +41,12 @@ header {
 
     position: relative;
 
-    color: #f4efe6;
+    height: 38vh;
 
-    padding:
-        72px
-        20px
-        58px
-        20px;
-
-    text-align: center;
+    min-height: 320px;
 
     overflow: hidden;
+
 }
 
 header h1 {
@@ -81,6 +76,13 @@ header p {
 .container {
 
     padding: 14px;
+
+    margin-top: -80px;
+
+    position: relative;
+
+    z-index: 5;
+
 }
 
 .lookup-card {
