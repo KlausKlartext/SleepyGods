@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Schlafende Götter – Buch der Abenteuer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Schlafende Götter</h1>
+    <p>Buch der Abenteuer</p>
+</header>
+
+<main class="container">
+
+<section class="lookup-card">
+
+<div class="display" id="display">
+0 0 0
+</div>
+
+<div class="numpad">
+
+<button onclick="addDigit('1')">1</button>
+<button onclick="addDigit('2')">2</button>
+<button onclick="addDigit('3')">3</button>
+
+<button onclick="addDigit('4')">4</button>
+<button onclick="addDigit('5')">5</button>
+<button onclick="addDigit('6')">6</button>
+
+<button onclick="addDigit('7')">7</button>
+<button onclick="addDigit('8')">8</button>
+<button onclick="addDigit('9')">9</button>
+
+<button class="clear-btn" onclick="backspace()">
+⌫
+</button>
+
+<button onclick="addDigit('0')">0</button>
+
+<button class="enter-btn" onclick="loadStory()">
+✓
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<div class="popup" id="story-popup">
+
+<div class="popup-top-right">
+
+<button class="speak-btn" onclick="toggleAudio()">
+▶
+</button>
+
+<span class="close-btn" onclick="closePopup()">
+×
+</span>
+
+</div>
+
+<div id="popup-content"></div>
+
+</div>
+
+<div class="popup-navigation">
+
+<button id="back-btn" class="nav-btn" onclick="goBack()">
+← Zurück
+</button>
+
+<button id="forward-btn" class="nav-btn" onclick="goForward()">
+Weiter →
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
