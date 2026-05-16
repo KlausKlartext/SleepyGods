@@ -1,24 +1,58 @@
-
 body {
     margin: 0;
     color: #3d3527;
     font-family: Georgia, serif;
-    background-color: #021821;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.30)),
-        url("images/background-ocean.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
+    background: transparent;
+    min-height: 100dvh;
     overflow-x: hidden;
+    position: relative;
+    isolation: isolate;
 }
 
 html {
     margin: 0;
     padding: 0;
+    min-height: 100%;
     background: #021821;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.08),
+            rgba(0,0,0,0.30)
+        ),
+        url("images/background-ocean.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transform: translateZ(0) scale(1.02);
+    transform-origin: center top;
+    will-change: transform;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(255,255,255,0.04),
+            rgba(0,0,0,0) 40%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.18)
+        );
 }
 
 body.popup-open .container,
@@ -30,7 +64,7 @@ body.popup-open header {
 header {
     position: relative;
     height: 50vh;
-    min-height: 260px;
+    min-height: 300px;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -39,7 +73,7 @@ header {
 .container {
     padding-left: 14px;
     padding-right: 14px;
-    margin-top: -90px;
+    margin-top: -120px;
     position: relative;
     z-index: 5;
 }
@@ -96,10 +130,11 @@ header {
 
 .clear-btn {
     background: #a45343 !important;
-    color: white;
+    color: white !important;
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: 26px !important;
     font-weight: bold;
+    line-height: 1;
 }
 
 .overlay {
