@@ -262,23 +262,7 @@ header {
 
 .speak-btn {
 
-    background: #2f5d62;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 10px;
-
-    width: 42px;
-
-    height: 42px;
-
-    font-size: 18px;
-
-    transition: 0.2s;
-
-    cursor: pointer;
+    display: none;
 }
 
 .speak-btn.disabled {
