@@ -1,7 +1,7 @@
 body {
     margin: 0;
 
-    padding-top: 0;
+    padding-top: max(0px, env(safe-area-inset-top));
 
     color: #3d3527;
 
